@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'TestFunctionalArray' target in the 'TestFunctionalArray' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
