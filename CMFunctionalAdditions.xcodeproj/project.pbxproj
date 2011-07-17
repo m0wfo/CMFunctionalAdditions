@@ -11,8 +11,8 @@
 		8330F9A913D2FD4C005C3D78 /* CMFunctionalDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330F9A713D2FD4C005C3D78 /* CMFunctionalDictionary.m */; };
 		8370F1DF13D2E7210073ADDD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370F1DE13D2E7210073ADDD /* Cocoa.framework */; };
 		8370F1E913D2E7210073ADDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8370F1E713D2E7210073ADDD /* InfoPlist.strings */; };
-		8370F1F213D2E7520073ADDD /* CMFunctionalArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 8370F1F013D2E7520073ADDD /* CMFunctionalArray.h */; };
-		8370F1F313D2E7520073ADDD /* CMFunctionalArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 8370F1F113D2E7520073ADDD /* CMFunctionalArray.m */; };
+		8399590713D3003500475D71 /* CMFunctionalArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 8399590513D3003500475D71 /* CMFunctionalArray.h */; };
+		8399590813D3003500475D71 /* CMFunctionalArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399590613D3003500475D71 /* CMFunctionalArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		8370F1E613D2E7210073ADDD /* CMFunctionalAdditions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CMFunctionalAdditions-Info.plist"; sourceTree = "<group>"; };
 		8370F1E813D2E7210073ADDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8370F1EA13D2E7210073ADDD /* CMFunctionalAdditions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMFunctionalAdditions-Prefix.pch"; sourceTree = "<group>"; };
-		8370F1F013D2E7520073ADDD /* CMFunctionalArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMFunctionalArray.h; path = ../CMFunctionalArray.h; sourceTree = "<group>"; };
-		8370F1F113D2E7520073ADDD /* CMFunctionalArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMFunctionalArray.m; path = ../CMFunctionalArray.m; sourceTree = "<group>"; };
+		8399590513D3003500475D71 /* CMFunctionalArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMFunctionalArray.h; sourceTree = "<group>"; };
+		8399590613D3003500475D71 /* CMFunctionalArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMFunctionalArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,8 @@
 		8370F1E413D2E7210073ADDD /* CMFunctionalAdditions */ = {
 			isa = PBXGroup;
 			children = (
-				8370F1F013D2E7520073ADDD /* CMFunctionalArray.h */,
-				8370F1F113D2E7520073ADDD /* CMFunctionalArray.m */,
+				8399590513D3003500475D71 /* CMFunctionalArray.h */,
+				8399590613D3003500475D71 /* CMFunctionalArray.m */,
 				8330F9A613D2FD4C005C3D78 /* CMFunctionalDictionary.h */,
 				8330F9A713D2FD4C005C3D78 /* CMFunctionalDictionary.m */,
 				8370F1E513D2E7210073ADDD /* Supporting Files */,
@@ -107,8 +107,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8370F1F213D2E7520073ADDD /* CMFunctionalArray.h in Headers */,
 				8330F9A813D2FD4C005C3D78 /* CMFunctionalDictionary.h in Headers */,
+				8399590713D3003500475D71 /* CMFunctionalArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +174,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8370F1F313D2E7520073ADDD /* CMFunctionalArray.m in Sources */,
 				8330F9A913D2FD4C005C3D78 /* CMFunctionalDictionary.m in Sources */,
+				8399590813D3003500475D71 /* CMFunctionalArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
