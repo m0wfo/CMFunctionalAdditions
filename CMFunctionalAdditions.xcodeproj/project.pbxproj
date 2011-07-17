@@ -9,7 +9,22 @@
 /* Begin PBXBuildFile section */
 		8370F1DF13D2E7210073ADDD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370F1DE13D2E7210073ADDD /* Cocoa.framework */; };
 		8370F1E913D2E7210073ADDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8370F1E713D2E7210073ADDD /* InfoPlist.strings */; };
+		8370F1F213D2E7520073ADDD /* CMFunctionalArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 8370F1F013D2E7520073ADDD /* CMFunctionalArray.h */; };
+		8370F1F313D2E7520073ADDD /* CMFunctionalArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 8370F1F113D2E7520073ADDD /* CMFunctionalArray.m */; };
+		8370F1FA13D2E8590073ADDD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370F1DE13D2E7210073ADDD /* Cocoa.framework */; };
+		8370F20013D2E8590073ADDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8370F1FE13D2E8590073ADDD /* InfoPlist.strings */; };
+		8370F20C13D2E9420073ADDD /* array_spec.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8370F20B13D2E9420073ADDD /* array_spec.rb */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8330F9A313D2F19D005C3D78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8370F1D113D2E7200073ADDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8370F1DA13D2E7210073ADDD;
+			remoteInfo = CMFunctionalAdditions;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8370F1DB13D2E7210073ADDD /* CMFunctionalAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CMFunctionalAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -17,9 +32,16 @@
 		8370F1E113D2E7210073ADDD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		8370F1E213D2E7210073ADDD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8370F1E313D2E7210073ADDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8370F1E613D2E7210073ADDD /* CMFunctionalAdditions-Info.plist */ = {isa = PBXFileReference; path = "CMFunctionalAdditions-Info.plist"; sourceTree = "<group>"; };
+		8370F1E613D2E7210073ADDD /* CMFunctionalAdditions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CMFunctionalAdditions-Info.plist"; sourceTree = "<group>"; };
 		8370F1E813D2E7210073ADDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8370F1EA13D2E7210073ADDD /* CMFunctionalAdditions-Prefix.pch */ = {isa = PBXFileReference; path = "CMFunctionalAdditions-Prefix.pch"; sourceTree = "<group>"; };
+		8370F1EA13D2E7210073ADDD /* CMFunctionalAdditions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMFunctionalAdditions-Prefix.pch"; sourceTree = "<group>"; };
+		8370F1F013D2E7520073ADDD /* CMFunctionalArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMFunctionalArray.h; sourceTree = "<group>"; };
+		8370F1F113D2E7520073ADDD /* CMFunctionalArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMFunctionalArray.m; sourceTree = "<group>"; };
+		8370F1F913D2E8590073ADDD /* TestFunctionalArray.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFunctionalArray.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8370F1FD13D2E8590073ADDD /* TestFunctionalArray-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestFunctionalArray-Info.plist"; sourceTree = "<group>"; };
+		8370F1FF13D2E8590073ADDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8370F20113D2E8590073ADDD /* TestFunctionalArray-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestFunctionalArray-Prefix.pch"; sourceTree = "<group>"; };
+		8370F20B13D2E9420073ADDD /* array_spec.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = array_spec.rb; path = ../array_spec.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,13 +53,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8370F1F513D2E8590073ADDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8370F1FA13D2E8590073ADDD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8370F1CF13D2E7200073ADDD = {
 			isa = PBXGroup;
 			children = (
+				8370F1F013D2E7520073ADDD /* CMFunctionalArray.h */,
+				8370F1F113D2E7520073ADDD /* CMFunctionalArray.m */,
 				8370F1E413D2E7210073ADDD /* CMFunctionalAdditions */,
+				8370F1FB13D2E8590073ADDD /* TestFunctionalArray */,
 				8370F1DD13D2E7210073ADDD /* Frameworks */,
 				8370F1DC13D2E7210073ADDD /* Products */,
 			);
@@ -47,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				8370F1DB13D2E7210073ADDD /* CMFunctionalAdditions.framework */,
+				8370F1F913D2E8590073ADDD /* TestFunctionalArray.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +122,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8370F1FB13D2E8590073ADDD /* TestFunctionalArray */ = {
+			isa = PBXGroup;
+			children = (
+				8370F20B13D2E9420073ADDD /* array_spec.rb */,
+				8370F1FC13D2E8590073ADDD /* Supporting Files */,
+			);
+			path = TestFunctionalArray;
+			sourceTree = "<group>";
+		};
+		8370F1FC13D2E8590073ADDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8370F1FD13D2E8590073ADDD /* TestFunctionalArray-Info.plist */,
+				8370F1FE13D2E8590073ADDD /* InfoPlist.strings */,
+				8370F20113D2E8590073ADDD /* TestFunctionalArray-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -95,6 +148,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8370F1F213D2E7520073ADDD /* CMFunctionalArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +173,25 @@
 			productReference = 8370F1DB13D2E7210073ADDD /* CMFunctionalAdditions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		8370F1F813D2E8590073ADDD /* TestFunctionalArray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8370F20613D2E8590073ADDD /* Build configuration list for PBXNativeTarget "TestFunctionalArray" */;
+			buildPhases = (
+				8370F1F413D2E8590073ADDD /* Sources */,
+				8370F1F513D2E8590073ADDD /* Frameworks */,
+				8370F1F613D2E8590073ADDD /* Resources */,
+				8370F1F713D2E8590073ADDD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8330F9A413D2F19D005C3D78 /* PBXTargetDependency */,
+			);
+			name = TestFunctionalArray;
+			productName = TestFunctionalArray;
+			productReference = 8370F1F913D2E8590073ADDD /* TestFunctionalArray.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +213,7 @@
 			projectRoot = "";
 			targets = (
 				8370F1DA13D2E7210073ADDD /* CMFunctionalAdditions */,
+				8370F1F813D2E8590073ADDD /* TestFunctionalArray */,
 			);
 		};
 /* End PBXProject section */
@@ -153,10 +227,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8370F1F613D2E8590073ADDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8370F20013D2E8590073ADDD /* InfoPlist.strings in Resources */,
+				8370F20C13D2E9420073ADDD /* array_spec.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8370F1F713D2E8590073ADDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/local/bin/macruby;
+			shellScript = "# Include the Bacon libraries\nrequire \"rubygems\"\nrequire \"bacon\"\n\n# Tell MacRuby where to find our framework\nENV['DYLD_FRAMEWORK_PATH'] = ENV['BUILT_PRODUCTS_DIR']\n\n# Setup Bacon to report on tests at the end\nBacon.summary_on_exit\n\n# Load all of the *_spec test files in the test bundle\nDir.glob('./*_spec.rb').each do |test_file|\nrequire test_file\nend";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8370F1D613D2E7210073ADDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8370F1F313D2E7520073ADDD /* CMFunctionalArray.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8370F1F413D2E8590073ADDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -165,11 +272,27 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8330F9A413D2F19D005C3D78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8370F1DA13D2E7210073ADDD /* CMFunctionalAdditions */;
+			targetProxy = 8330F9A313D2F19D005C3D78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8370F1E713D2E7210073ADDD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8370F1E813D2E7210073ADDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8370F1FE13D2E8590073ADDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8370F1FF13D2E8590073ADDD /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -182,6 +305,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -200,6 +324,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -219,9 +344,11 @@
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CMFunctionalAdditions/CMFunctionalAdditions-Prefix.pch";
 				INFOPLIST_FILE = "CMFunctionalAdditions/CMFunctionalAdditions-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -237,11 +364,61 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CMFunctionalAdditions/CMFunctionalAdditions-Prefix.pch";
 				INFOPLIST_FILE = "CMFunctionalAdditions/CMFunctionalAdditions-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		8370F20713D2E8590073ADDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestFunctionalArray/TestFunctionalArray-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "TestFunctionalArray/TestFunctionalArray-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8370F20813D2E8590073ADDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestFunctionalArray/TestFunctionalArray-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "TestFunctionalArray/TestFunctionalArray-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -264,6 +441,16 @@
 				8370F1EF13D2E7210073ADDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8370F20613D2E8590073ADDD /* Build configuration list for PBXNativeTarget "TestFunctionalArray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8370F20713D2E8590073ADDD /* Debug */,
+				8370F20813D2E8590073ADDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
