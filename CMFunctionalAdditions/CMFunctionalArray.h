@@ -13,6 +13,8 @@
 
 - (NSArray*)mapWithBlock:(NSDictionary* (^)(id obj))block;
 - (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate;
+- (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate;
+- (NSArray*)partitionWithBlock:(BOOL (^)(id obj))block;
 - (id)reduceWithBlock:(id (^)(id memo, id obj))block andAccumulator:(id)accumulator;
 
 @end

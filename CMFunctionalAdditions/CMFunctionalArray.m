@@ -40,6 +40,21 @@
     return filtered;    
 }
 
+- (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate
+{
+    return [self filterWithPredicate:^BOOL(id obj) {
+        return predicate(obj) == FALSE;
+    }];
+}
+
+- (NSArray*)partitionWithBlock:(BOOL (^)(id))block
+{    
+    NSArray* matching = [self filterWithPredicate:block];
+    NSArray* rest = [self removeWithPredicate:block];
+    
+    return [NSArray arrayWithObjects:matching, rest, nil];
+}
+
 - (id)reduceWithBlock:(id (^)(id memo, id obj))block andAccumulator:(id)accumulator
 {
     if ([self count] == 1) return [self objectAtIndex:0];
