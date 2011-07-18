@@ -15,8 +15,9 @@
 {
     __block NSMutableArray* mapped = [NSMutableArray arrayWithCapacity:[self count]];
     dispatch_queue_t result_queue = dispatch_queue_create(NULL, NULL);
-    dispatch_apply([self count], dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
-        dispatch_async(result_queue, ^(void) { [mapped addObject:block([self objectAtIndex:i])]; });
+    
+    dispatch_apply([self count], result_queue, ^(size_t i) {
+        [mapped addObject:block([self objectAtIndex:i])];
     });
     
     dispatch_release(result_queue);
@@ -24,16 +25,14 @@
     return mapped;
 }
 
-- (NSArray*)filterWithPredicate:(BOOL (^)(id))predicate
+- (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate
 {
     __block NSMutableArray* filtered = [NSMutableArray array];
     dispatch_queue_t result_queue = dispatch_queue_create(NULL, NULL);
     
-    dispatch_apply([self count], dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
+    dispatch_apply([self count], result_queue, ^(size_t i) {
         id obj = [self objectAtIndex:i];
-        if (predicate(obj)) {
-            dispatch_async(result_queue, ^(void) { [filtered addObject:obj]; });
-        }
+        if (predicate(obj)) [filtered addObject:obj];
     });
     
     dispatch_release(result_queue);
