@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8330F9A813D2FD4C005C3D78 /* CMFunctionalDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 8330F9A613D2FD4C005C3D78 /* CMFunctionalDictionary.h */; };
+		8330F9A813D2FD4C005C3D78 /* CMFunctionalDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 8330F9A613D2FD4C005C3D78 /* CMFunctionalDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8330F9A913D2FD4C005C3D78 /* CMFunctionalDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330F9A713D2FD4C005C3D78 /* CMFunctionalDictionary.m */; };
 		8370F1DF13D2E7210073ADDD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370F1DE13D2E7210073ADDD /* Cocoa.framework */; };
 		8370F1E913D2E7210073ADDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8370F1E713D2E7210073ADDD /* InfoPlist.strings */; };
-		8399590713D3003500475D71 /* CMFunctionalArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 8399590513D3003500475D71 /* CMFunctionalArray.h */; };
+		8399590713D3003500475D71 /* CMFunctionalArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 8399590513D3003500475D71 /* CMFunctionalArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8399590813D3003500475D71 /* CMFunctionalArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399590613D3003500475D71 /* CMFunctionalArray.m */; };
+		83BFDD1613D993BA005EC015 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83BFDD1513D993BA005EC015 /* SenTestingKit.framework */; };
+		83BFDD1713D993BA005EC015 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370F1DE13D2E7210073ADDD /* Cocoa.framework */; };
+		83BFDD1D13D993BB005EC015 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83BFDD1B13D993BB005EC015 /* InfoPlist.strings */; };
+		83BFDD1F13D993BB005EC015 /* CMFunctionalArrayTest.h in Resources */ = {isa = PBXBuildFile; fileRef = 83BFDD1E13D993BB005EC015 /* CMFunctionalArrayTest.h */; };
+		83BFDD2113D993BB005EC015 /* CMFunctionalArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BFDD2013D993BB005EC015 /* CMFunctionalArrayTest.m */; };
+		83BFDD3413D9AC4B005EC015 /* CMFunctionalAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370F1DB13D2E7210073ADDD /* CMFunctionalAdditions.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83BFDD2F13D9A7DD005EC015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8370F1D113D2E7200073ADDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8370F1DA13D2E7210073ADDD;
+			remoteInfo = CMFunctionalAdditions;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8330F9A613D2FD4C005C3D78 /* CMFunctionalDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMFunctionalDictionary.h; sourceTree = "<group>"; };
@@ -28,6 +44,13 @@
 		8370F1EA13D2E7210073ADDD /* CMFunctionalAdditions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMFunctionalAdditions-Prefix.pch"; sourceTree = "<group>"; };
 		8399590513D3003500475D71 /* CMFunctionalArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMFunctionalArray.h; sourceTree = "<group>"; };
 		8399590613D3003500475D71 /* CMFunctionalArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMFunctionalArray.m; sourceTree = "<group>"; };
+		83BFDD1413D993BA005EC015 /* CMFunctionalTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMFunctionalTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83BFDD1513D993BA005EC015 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		83BFDD1A13D993BB005EC015 /* CMFunctionalTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CMFunctionalTest-Info.plist"; sourceTree = "<group>"; };
+		83BFDD1C13D993BB005EC015 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83BFDD1E13D993BB005EC015 /* CMFunctionalArrayTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMFunctionalArrayTest.h; sourceTree = "<group>"; };
+		83BFDD2013D993BB005EC015 /* CMFunctionalArrayTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMFunctionalArrayTest.m; sourceTree = "<group>"; };
+		83BFDD2213D993BB005EC015 /* CMFunctionalTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMFunctionalTest-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +62,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83BFDD1013D993BA005EC015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BFDD3413D9AC4B005EC015 /* CMFunctionalAdditions.framework in Frameworks */,
+				83BFDD1613D993BA005EC015 /* SenTestingKit.framework in Frameworks */,
+				83BFDD1713D993BA005EC015 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				8370F1E413D2E7210073ADDD /* CMFunctionalAdditions */,
+				83BFDD1813D993BA005EC015 /* CMFunctionalTest */,
 				8370F1DD13D2E7210073ADDD /* Frameworks */,
 				8370F1DC13D2E7210073ADDD /* Products */,
 			);
@@ -55,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8370F1DB13D2E7210073ADDD /* CMFunctionalAdditions.framework */,
+				83BFDD1413D993BA005EC015 /* CMFunctionalTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8370F1DE13D2E7210073ADDD /* Cocoa.framework */,
+				83BFDD1513D993BA005EC015 /* SenTestingKit.framework */,
 				8370F1E013D2E7210073ADDD /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -100,6 +136,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		83BFDD1813D993BA005EC015 /* CMFunctionalTest */ = {
+			isa = PBXGroup;
+			children = (
+				83BFDD1E13D993BB005EC015 /* CMFunctionalArrayTest.h */,
+				83BFDD2013D993BB005EC015 /* CMFunctionalArrayTest.m */,
+				83BFDD1913D993BB005EC015 /* Supporting Files */,
+			);
+			path = CMFunctionalTest;
+			sourceTree = "<group>";
+		};
+		83BFDD1913D993BB005EC015 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83BFDD1A13D993BB005EC015 /* CMFunctionalTest-Info.plist */,
+				83BFDD1B13D993BB005EC015 /* InfoPlist.strings */,
+				83BFDD2213D993BB005EC015 /* CMFunctionalTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -133,6 +189,25 @@
 			productReference = 8370F1DB13D2E7210073ADDD /* CMFunctionalAdditions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		83BFDD1313D993BA005EC015 /* CMFunctionalTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83BFDD2513D993BB005EC015 /* Build configuration list for PBXNativeTarget "CMFunctionalTest" */;
+			buildPhases = (
+				83BFDD0F13D993BA005EC015 /* Sources */,
+				83BFDD1013D993BA005EC015 /* Frameworks */,
+				83BFDD1113D993BA005EC015 /* Resources */,
+				83BFDD1213D993BA005EC015 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83BFDD3013D9A7DD005EC015 /* PBXTargetDependency */,
+			);
+			name = CMFunctionalTest;
+			productName = CMFunctionalTest;
+			productReference = 83BFDD1413D993BA005EC015 /* CMFunctionalTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -154,6 +229,7 @@
 			projectRoot = "";
 			targets = (
 				8370F1DA13D2E7210073ADDD /* CMFunctionalAdditions */,
+				83BFDD1313D993BA005EC015 /* CMFunctionalTest */,
 			);
 		};
 /* End PBXProject section */
@@ -167,7 +243,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83BFDD1113D993BA005EC015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BFDD1D13D993BB005EC015 /* InfoPlist.strings in Resources */,
+				83BFDD1F13D993BB005EC015 /* CMFunctionalArrayTest.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83BFDD1213D993BA005EC015 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8370F1D613D2E7210073ADDD /* Sources */ = {
@@ -179,13 +280,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83BFDD0F13D993BA005EC015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BFDD2113D993BB005EC015 /* CMFunctionalArrayTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83BFDD3013D9A7DD005EC015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8370F1DA13D2E7210073ADDD /* CMFunctionalAdditions */;
+			targetProxy = 83BFDD2F13D9A7DD005EC015 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8370F1E713D2E7210073ADDD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8370F1E813D2E7210073ADDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		83BFDD1B13D993BB005EC015 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83BFDD1C13D993BB005EC015 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -267,6 +392,48 @@
 			};
 			name = Release;
 		};
+		83BFDD2313D993BB005EC015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CMFunctionalTest/CMFunctionalTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "CMFunctionalTest/CMFunctionalTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		83BFDD2413D993BB005EC015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CMFunctionalTest/CMFunctionalTest-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "CMFunctionalTest/CMFunctionalTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -287,6 +454,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		83BFDD2513D993BB005EC015 /* Build configuration list for PBXNativeTarget "CMFunctionalTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83BFDD2313D993BB005EC015 /* Debug */,
+				83BFDD2413D993BB005EC015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

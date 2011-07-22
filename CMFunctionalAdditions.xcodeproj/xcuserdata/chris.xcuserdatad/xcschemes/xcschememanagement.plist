@@ -9,10 +9,10 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>TestFunctionalArray.xcscheme</key>
+		<key>CMFunctionalTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>8370F1F813D2E8590073ADDD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83BFDD1313D993BA005EC015</key>
 		<dict>
 			<key>primary</key>
 			<true/>
