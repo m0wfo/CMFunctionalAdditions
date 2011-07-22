@@ -43,7 +43,7 @@
 - (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate
 {
     return [self filterWithPredicate:^BOOL(id obj) {
-        return predicate(obj) == FALSE;
+        return predicate(obj) == NO;
     }];
 }
 
