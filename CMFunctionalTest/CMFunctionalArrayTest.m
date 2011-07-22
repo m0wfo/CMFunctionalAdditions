@@ -26,7 +26,7 @@
     [super tearDown];
 }
 
-- (void)testArrayRemovalAndFiltration
+- (void)testRemovalAndFiltration
 {
     NSNumber* num = [NSNumber numberWithInt:1337];
     BOOL (^predicate)(NSNumber* obj) = ^(NSNumber* obj) { return [obj isEqualToNumber:num]; };
@@ -43,7 +43,7 @@
     STAssertEquals([combined count], [sample count], @"Combination of filtration and removal should yield original array");
 }
 
-- (void)testArrayMapping
+- (void)testMapping
 {
     NSString* (^applied_fun)(id obj) = ^(id obj) { return [NSString stringWithFormat:@"<->%@<->", obj]; };
     
