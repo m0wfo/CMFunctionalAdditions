@@ -3,7 +3,7 @@
 //  Functional Additions
 //
 //  Created by Chris Mowforth on 14/07/2011.
-//  Copyright 2011 Limpet. All rights reserved.
+//  Copyright 2011 Chris Mowforth. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
