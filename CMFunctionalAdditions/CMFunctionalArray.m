@@ -11,13 +11,20 @@
 
 @implementation NSArray (CMFunctionalArray)
 
-- (NSArray*)mapWithBlock:(NSDictionary *(^)(id obj))block
+- (NSArray *)mapWithBlock:(id (^)(id obj))block
+{
+    return [self mapWithIndexedBlock:^id(NSUInteger idx, id mappedObj) {
+        return block(mappedObj);
+    }];
+}
+
+- (NSArray*)mapWithIndexedBlock:(id (^)(NSUInteger idx, id obj))block
 {
     __block NSMutableArray* mapped = [NSMutableArray arrayWithCapacity:[self count]];
     dispatch_queue_t result_queue = dispatch_queue_create(NULL, NULL);
     
     dispatch_apply([self count], result_queue, ^(size_t i) {
-        [mapped addObject:block([self objectAtIndex:i])];
+        [mapped addObject:block(i, [self objectAtIndex:i])];
     });
     
     dispatch_release(result_queue);

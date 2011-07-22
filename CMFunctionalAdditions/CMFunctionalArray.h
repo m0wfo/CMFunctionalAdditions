@@ -11,7 +11,8 @@
 
 @interface NSArray (CMFunctionalArray)
 
-- (NSArray*)mapWithBlock:(NSDictionary* (^)(id obj))block;
+- (NSArray*)mapWithBlock:(id (^)(id obj))block;
+- (NSArray*)mapWithIndexedBlock:(id (^)(NSUInteger idx, id obj))block;
 - (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate;
 - (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate;
 - (NSArray*)partitionWithBlock:(BOOL (^)(id obj))block;
