@@ -65,4 +65,19 @@
     STAssertTrue([reduced isKindOfClass:[NSNumber class]], @"Reduction should return same type yielded by block");
 }
 
+- (void)testPartitioningBySize
+{
+    NSArray* partitioned = [sample partitionWithSize:3];
+    NSUInteger number_sub_arrays = ([sample count] / 3) + ([sample count] % 3);
+    STAssertEquals([partitioned count], number_sub_arrays, @"Partitioning by size should return correct number of sub-arrays");
+}
+
+- (void)testUnique
+{
+    NSArray* duplicates = [NSArray arrayWithObjects:@"foo", @"foo", @"bar", nil];
+    NSArray* unique = [NSArray arrayWithObjects:@"foo", @"bar", nil];
+    
+    STAssertEqualObjects([duplicates uniqueElements], unique, @"UniqueElements should remove objects with duplicate value");
+}
+
 @end

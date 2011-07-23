@@ -16,6 +16,8 @@
 - (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate;
 - (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate;
 - (NSArray*)partitionWithBlock:(BOOL (^)(id obj))block;
+- (NSArray*)partitionWithSize:(NSUInteger)size;
 - (id)reduceWithBlock:(id (^)(id memo, id obj))block andAccumulator:(id)accumulator;
+- (NSArray*)uniqueElements;
 
 @end

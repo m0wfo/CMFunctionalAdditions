@@ -62,6 +62,32 @@
     return [NSArray arrayWithObjects:matching, rest, nil];
 }
 
+- (NSArray*)partitionWithSize:(NSUInteger)size
+{
+    __block NSMutableArray* sub;
+    NSUInteger count = [self count];
+    NSUInteger remainder = count % size;
+    NSUInteger total = (count / size) + remainder;
+    
+    sub = [NSMutableArray arrayWithCapacity:total];
+    
+    dispatch_queue_t result_queue = dispatch_queue_create(NULL, NULL);
+    
+    dispatch_apply(total, result_queue, ^(size_t i) {
+        NSUInteger step = i * size;
+        NSUInteger upper_bound = size;
+        if (step + upper_bound > [self count]) upper_bound = remainder;
+        NSRange range = NSMakeRange(step, upper_bound);
+        NSArray* sub_array = [self subarrayWithRange:range];
+        
+        [sub insertObject:sub_array atIndex:i];
+    });
+    
+    dispatch_release(result_queue);
+    
+    return sub;
+}
+
 - (id)reduceWithBlock:(id (^)(id memo, id obj))block andAccumulator:(id)accumulator
 {
     if ([self count] == 1) return [self objectAtIndex:0];
@@ -71,6 +97,21 @@
     for (id obj in self) { acc = block(acc, obj); }
     
     return acc;
+}
+
+- (NSArray*)uniqueElements
+{
+    __block NSMutableArray* unique = [NSMutableArray array];
+    dispatch_queue_t result_queue = dispatch_queue_create(NULL, NULL);
+    
+    dispatch_apply([self count], result_queue, ^(size_t i) {
+        id obj = [self objectAtIndex:i];
+        if (![unique containsObject:obj]) [unique addObject:obj];
+    });
+    
+    dispatch_release(result_queue);
+    
+    return unique;
 }
 
 @end
