@@ -34,12 +34,30 @@
 
 - (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate
 {
+    return [self filterWithPredicate:predicate andStopOnFailure:NO];
+}
+
+- (NSArray*)removeWithPredicate:(BOOL (^)(id))predicate
+{
+    return [self removeWithPredicate:predicate andStopOnFailure:NO];
+}
+
+- (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate andStopOnFailure:(BOOL)stop
+{
     __block NSMutableArray* filtered = [NSMutableArray array];
+    __block BOOL proceed = YES;
+
     dispatch_queue_t result_queue = dispatch_queue_create(NULL, NULL);
     
     dispatch_apply([self count], result_queue, ^(size_t i) {
-        id obj = [self objectAtIndex:i];
-        if (predicate(obj)) [filtered addObject:obj];
+        if (proceed) {
+            id obj = [self objectAtIndex:i];
+            if (predicate(obj)) {
+                [filtered addObject:obj];
+            } else {
+                if (stop) proceed = NO;
+            }
+        }
     });
     
     dispatch_release(result_queue);
@@ -47,11 +65,16 @@
     return filtered;    
 }
 
-- (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate
+- (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate andStopOnFailure:(BOOL)stop
 {
     return [self filterWithPredicate:^BOOL(id obj) {
         return predicate(obj) == NO;
-    }];
+    } andStopOnFailure:NO];
+}
+
+- (NSArray*)takeWhilePredicateHoldsTrue:(BOOL (^)(id obj))predicate
+{
+    return [self filterWithPredicate:predicate andStopOnFailure:YES];
 }
 
 - (NSArray*)partitionWithBlock:(BOOL (^)(id))block

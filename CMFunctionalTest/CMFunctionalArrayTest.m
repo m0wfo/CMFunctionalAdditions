@@ -80,4 +80,11 @@
     STAssertEqualObjects([duplicates uniqueElements], unique, @"UniqueElements should remove objects with duplicate value");
 }
 
+- (void)testTakeWhile
+{
+    NSArray* taken = [sample takeWhilePredicateHoldsTrue:^BOOL(id obj) {
+        return YES;
+    }];
+}
+
 @end

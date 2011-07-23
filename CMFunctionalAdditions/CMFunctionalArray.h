@@ -15,6 +15,9 @@
 - (NSArray*)mapWithIndexedBlock:(id (^)(NSUInteger idx, id obj))block;
 - (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate;
 - (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate;
+- (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate andStopOnFailure:(BOOL)stop;
+- (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate andStopOnFailure:(BOOL)stop;
+- (NSArray*)takeWhilePredicateHoldsTrue:(BOOL (^)(id obj))predicate;
 - (NSArray*)partitionWithBlock:(BOOL (^)(id obj))block;
 - (NSArray*)partitionWithSize:(NSUInteger)size;
 - (id)reduceWithBlock:(id (^)(id memo, id obj))block andAccumulator:(id)accumulator;
