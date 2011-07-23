@@ -14,3 +14,4 @@
 @end
 
 NSMutableArray* sample;
+NSNumber* num;

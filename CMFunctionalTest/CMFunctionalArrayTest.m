@@ -14,9 +14,11 @@
 {
     [super setUp];
     
+    num = [NSNumber numberWithInt:3];
+
     sample = [NSMutableArray array];
     int i;
-    for (i = 0; i < 2000; i++) [sample addObject:[NSNumber numberWithInt:i]];
+    for (i = 0; i < 10; i++) [sample addObject:[NSNumber numberWithInt:i]]; // 2001 just to be an odd number
 }
 
 - (void)tearDown
@@ -28,7 +30,6 @@
 
 - (void)testRemovalAndFiltration
 {
-    NSNumber* num = [NSNumber numberWithInt:1337];
     BOOL (^predicate)(NSNumber* obj) = ^(NSNumber* obj) { return [obj isEqualToNumber:num]; };
 
     NSArray* removed = [sample removeWithPredicate:predicate];
@@ -51,6 +52,17 @@
     
     STAssertEquals([mapped count], [sample count], @"Mapped array should be same length as original");
     STAssertEqualObjects([mapped lastObject], applied_fun([sample lastObject]), @"Object mappings should be returned in order");
+}
+
+- (void)testReduction
+{
+    id reduced = [sample reduceWithBlock:^id(id memo, id obj) {
+        return [NSNumber numberWithInt:([memo intValue] + [obj intValue])];
+    } andAccumulator:[NSNumber numberWithInt:0]];
+    
+    STAssertNotNil(reduced, @"Reduction should return something");
+    STAssertEqualObjects(reduced, [NSNumber numberWithInt:45], @"Reduction should return correct value");
+    STAssertTrue([reduced isKindOfClass:[NSNumber class]], @"Reduction should return same type yielded by block");
 }
 
 @end
