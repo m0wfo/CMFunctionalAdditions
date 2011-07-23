@@ -10,3 +10,4 @@ Check out the [site](http://functional.chris.mowforth.com) for more information 
 Licensing
 ----
 
+CMFunctionalAdditions is released under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).
