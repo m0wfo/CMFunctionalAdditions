@@ -1,0 +1,11 @@
+html {
+    color:#222;
+    font-family:Helvetica, Arial, sans-serif;
+    
+}
+
+#container {
+    width:750px;
+    margin:0 auto;
+    margin-top:2em
+}
