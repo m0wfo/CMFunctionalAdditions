@@ -21,7 +21,7 @@
 - (NSArray*)mapWithIndexedBlock:(id (^)(NSUInteger idx, id obj))block
 {
     __block NSMutableArray* mapped = [NSMutableArray arrayWithCapacity:[self count]];
-    dispatch_queue_t result_queue = dispatch_queue_create(NULL, NULL);
+    dispatch_queue_t result_queue = dispatch_queue_create(NULL, DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_apply([self count], result_queue, ^(size_t i) {
         [mapped addObject:block(i, [self objectAtIndex:i])];
