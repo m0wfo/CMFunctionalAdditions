@@ -87,6 +87,8 @@
 
 - (NSArray*)splitWithSize:(NSUInteger)size
 {
+    if (size > [self count] || size == 0) [NSException raise:@"Invalid size" format:@"The array cannot be split into chunks of size %lu", size];
+
     __block NSMutableArray* sub;
     NSUInteger count = [self count];
     NSUInteger remainder = count % size;

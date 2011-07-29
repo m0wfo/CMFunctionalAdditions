@@ -69,7 +69,12 @@
 {
     NSArray* partitioned = [sample splitWithSize:3];
     NSUInteger number_sub_arrays = ([sample count] / 3) + ([sample count] % 3);
+
     STAssertEquals([partitioned count], number_sub_arrays, @"Partitioning by size should return correct number of sub-arrays");
+    STAssertNoThrow([sample splitWithSize:3], @"Split with size within range should not throw error");
+
+    STAssertThrows([sample splitWithSize:[sample count]+1], @"Split should throw exception when size > split.count");
+    STAssertThrows([sample splitWithSize:0], @"Split should throw exception when size is zero");
 }
 
 - (void)testUnique
