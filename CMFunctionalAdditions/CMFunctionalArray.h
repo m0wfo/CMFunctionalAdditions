@@ -19,7 +19,7 @@
 - (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate andStopOnFailure:(BOOL)stop;
 - (NSArray*)takeWhilePredicateHoldsTrue:(BOOL (^)(id obj))predicate;
 - (NSArray*)partitionWithBlock:(BOOL (^)(id obj))block;
-- (NSArray*)partitionWithSize:(NSUInteger)size;
+- (NSArray*)splitWithSize:(NSUInteger)size;
 - (id)reduceWithBlock:(id (^)(id memo, id obj))block andAccumulator:(id)accumulator;
 - (NSArray*)uniqueElements;
 
