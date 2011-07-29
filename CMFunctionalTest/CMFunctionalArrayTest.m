@@ -28,22 +28,6 @@
     [super tearDown];
 }
 
-- (void)testRemovalAndFiltration
-{
-    BOOL (^predicate)(NSNumber* obj) = ^(NSNumber* obj) { return [obj isEqualToNumber:num]; };
-
-    NSArray* removed = [sample removeWithPredicate:predicate];
-    NSArray* filtered = [sample filterWithPredicate:predicate];
-
-    STAssertEquals([removed count], [sample count] - 1, @"One object should have been removed");
-    STAssertEquals([filtered count], (NSUInteger)1, @"One object should have been filtered");
-    
-//    Filter and remove are duals of each other:
-    NSArray* combined = [removed arrayByAddingObjectsFromArray:filtered];
-
-    STAssertEquals([combined count], [sample count], @"Combination of filtration and removal should yield original array");
-}
-
 - (void)testMapping
 {
     NSString* (^applied_fun)(id obj) = ^(id obj) { return [NSString stringWithFormat:@"<->%@<->", obj]; };
@@ -52,6 +36,22 @@
     
     STAssertEquals([mapped count], [sample count], @"Mapped array should be same length as original");
     STAssertEqualObjects([mapped lastObject], applied_fun([sample lastObject]), @"Object mappings should be returned in order");
+}
+
+- (void)testRemovalAndFiltration
+{
+    BOOL (^predicate)(NSNumber* obj) = ^(NSNumber* obj) { return [obj isEqualToNumber:num]; };
+    
+    NSArray* removed = [sample removeWithPredicate:predicate];
+    NSArray* filtered = [sample filterWithPredicate:predicate];
+    
+    STAssertEquals([removed count], [sample count] - 1, @"One object should have been removed");
+    STAssertEquals([filtered count], (NSUInteger)1, @"One object should have been filtered");
+    
+    //    Filter and remove are duals of each other:
+    NSArray* combined = [removed arrayByAddingObjectsFromArray:filtered];
+    
+    STAssertEquals([combined count], [sample count], @"Combination of filtration and removal should yield original array");
 }
 
 - (void)testReduction
@@ -65,9 +65,9 @@
     STAssertTrue([reduced isKindOfClass:[NSNumber class]], @"Reduction should return same type yielded by block");
 }
 
-- (void)testPartitioningBySize
+- (void)testSplittingBySize
 {
-    NSArray* partitioned = [sample partitionWithSize:3];
+    NSArray* partitioned = [sample splitWithSize:3];
     NSUInteger number_sub_arrays = ([sample count] / 3) + ([sample count] % 3);
     STAssertEquals([partitioned count], number_sub_arrays, @"Partitioning by size should return correct number of sub-arrays");
 }
@@ -82,9 +82,12 @@
 
 - (void)testTakeWhile
 {
-    NSArray* taken = [sample takeWhilePredicateHoldsTrue:^BOOL(id obj) {
-        return YES;
+    NSArray* taken = [sample takeWhilePredicateHoldsTrue:^BOOL(NSNumber* obj) {
+        return [obj isLessThanOrEqualTo:num];
     }];
+    
+    STAssertTrue(([taken count] == 4), @"Should take elements with value 0-4");
+    STAssertEqualObjects(taken, [sample subarrayWithRange:NSMakeRange(0, 4)], @"TakeWhile should have yielded the equivalent to first 4 elements of sample");
 }
 
 @end
