@@ -139,4 +139,17 @@
     return unique;
 }
 
+- (id)head
+{
+    if ([self count] == 0) return nil;
+    return [self objectAtIndex:0];
+}
+
+- (NSArray*)tail
+{
+    if ([self count] == 0) return nil;
+    if ([self count] == 1) return [self head];
+    return [self subarrayWithRange:NSMakeRange(1, [self count]-1)];
+}
+
 @end

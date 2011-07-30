@@ -23,8 +23,6 @@
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    
     [super tearDown];
 }
 
@@ -93,6 +91,27 @@
     
     STAssertTrue(([taken count] == 4), @"Should take elements with value 0-4");
     STAssertEqualObjects(taken, [sample subarrayWithRange:NSMakeRange(0, 4)], @"TakeWhile should have yielded the equivalent to first 4 elements of sample");
+}
+
+- (void)testHead
+{
+    id first = [sample head];
+    
+    STAssertEqualObjects([[NSArray array] head], nil, @"Empty array head should return nil");
+    STAssertEqualObjects(first, [sample objectAtIndex:0], @"Head should return object at x[0]");
+}
+
+- (void)testTail
+{
+    NSArray* tail = [sample tail];
+
+    STAssertEqualObjects([[NSArray array] tail], nil, @"Empty array tail should return nil");
+    STAssertTrue([tail count] == ([sample count] - 1), @"Tail should be 1 element shorter than an array of length > 1");
+    STAssertEqualObjects(tail, [sample subarrayWithRange:NSMakeRange(1, [sample count]-1)], @"Head should return object at x[0]");
+    
+    NSArray* one_element = [NSArray arrayWithObject:@"onlyOne"];
+    
+    STAssertEqualObjects([one_element head], [one_element tail], @"Tail should return first element in a 1-element array");
 }
 
 @end

@@ -22,5 +22,7 @@
 - (NSArray*)splitWithSize:(NSUInteger)size;
 - (id)reduceWithBlock:(id (^)(id memo, id obj))block andAccumulator:(id)accumulator;
 - (NSArray*)uniqueElements;
+- (id)head;
+- (NSArray*)tail;
 
 @end
