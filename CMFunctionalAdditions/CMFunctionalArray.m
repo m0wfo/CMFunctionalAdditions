@@ -29,7 +29,7 @@
     
     dispatch_release(result_queue);
     
-    return mapped;
+    return [NSArray arrayWithArray:mapped];
 }
 
 - (NSArray*)filterWithPredicate:(BOOL (^)(id obj))predicate
@@ -62,7 +62,7 @@
     
     dispatch_release(result_queue);
     
-    return filtered;    
+    return [NSArray arrayWithArray:filtered];
 }
 
 - (NSArray*)removeWithPredicate:(BOOL (^)(id obj))predicate andStopOnFailure:(BOOL)stop
@@ -110,7 +110,7 @@
     
     dispatch_release(result_queue);
     
-    return sub;
+    return [NSArray arrayWithArray:sub];
 }
 
 - (id)reduceWithBlock:(id (^)(id memo, id obj))block andAccumulator:(id)accumulator
@@ -136,7 +136,7 @@
     
     dispatch_release(result_queue);
     
-    return unique;
+    return [NSArray arrayWithArray:unique];
 }
 
 - (id)head
