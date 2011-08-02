@@ -445,7 +445,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CMFunctionalAdditions/CMFunctionalAdditions-Prefix.pch";
 				INFOPLIST_FILE = "CMFunctionalAdditions/CMFunctionalAdditions-Info.plist";
@@ -465,7 +465,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CMFunctionalAdditions/CMFunctionalAdditions-Prefix.pch";
 				INFOPLIST_FILE = "CMFunctionalAdditions/CMFunctionalAdditions-Info.plist";
@@ -582,6 +582,7 @@
 				83AB195213E31FFB0006781F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83BFDD2513D993BB005EC015 /* Build configuration list for PBXNativeTarget "CMFunctionalTest" */ = {
 			isa = XCConfigurationList;
